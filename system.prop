@@ -1,0 +1,35 @@
+#
+# system.prop for hllte
+#
+
+# Media
+ro.sapa.jack.master=alsa
+ro.hdcp2.rx=tz
+
+ro.build.scafe=americano
+ro.build.scafe.size=short
+ro.build.scafe.shot=double
+
+# USB
+persist.sys.usb.config=mtp,adb
+
+ro.sf.lcd_density=320
+ro.zygote.disable_gl_preload=1
+debug.sf.swaprect=0
+nfc.app_log_level=2
+
+# Randomly from stock
+ro.hdcp2.rx=tz
+ro.secwvk=220
+ro.adb.qemud=1
+ro.sec.fle.encryption=true
+ro.securestorage.support=true
+
+# Wifi
+wifi.interface=wlan0
+
+#RIL
+rild.libpath=/system/lib/libsec-ril.so
+rild.libargs=-d /dev/ttyS0
+ro.ril.hsxpa=1
+ro.ril.gprsclass=10
