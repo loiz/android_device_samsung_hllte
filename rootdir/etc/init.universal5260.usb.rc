@@ -1,22 +1,40 @@
 on init
+<<<<<<< HEAD
     write /sys/class/android_usb/android0/iSerial ${ro.serialno}
+=======
+    write /sys/class/android_usb/android0/iSerial $ro.serialno
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126
     write /sys/class/android_usb/android0/f_rndis/manufacturer Samsung
     write /sys/class/android_usb/android0/f_rndis/vendorID 04e8
     write /sys/class/android_usb/android0/f_rndis/wceis 1
 
 on boot
+<<<<<<< HEAD
     write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
     write /sys/class/android_usb/android0/iProduct ${ro.product.model}
     write /sys/class/android_usb/android0/iSerial ${ro.serialno}
+=======
+    write /sys/class/android_usb/android0/iManufacturer $ro.product.manufacturer
+    write /sys/class/android_usb/android0/iProduct $ro.product.model
+    write /sys/class/android_usb/android0/iSerial $ro.serialno
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126
     write /sys/class/android_usb/f_mass_storage/inquiry_string "Samsung"
 
 on property:sys.usb.config=mtp
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 04e8
     write /sys/class/android_usb/android0/idProduct 6860
+<<<<<<< HEAD
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/class/android_usb/android0/enable 1
     start adbd
+=======
+    write /sys/class/android_usb/android0/bDeviceClass 239
+    write /sys/class/android_usb/android0/bDeviceSubClass 2
+    write /sys/class/android_usb/android0/bDeviceProtocol 1
+    write /sys/class/android_usb/android0/functions ${sys.usb.config}
+    write /sys/class/android_usb/android0/enable 1
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126
     setprop sys.usb.state ${sys.usb.config}
 
 
@@ -24,6 +42,12 @@ on property:sys.usb.config=mtp,adb
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 04e8
     write /sys/class/android_usb/android0/idProduct 6860
+<<<<<<< HEAD
+=======
+    write /sys/class/android_usb/android0/bDeviceClass 239
+    write /sys/class/android_usb/android0/bDeviceSubClass 2
+    write /sys/class/android_usb/android0/bDeviceProtocol 1
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/class/android_usb/android0/enable 1
     start adbd
@@ -33,6 +57,12 @@ on property:sys.usb.config=rndis
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 04e8
     write /sys/class/android_usb/android0/idProduct 6863
+<<<<<<< HEAD
+=======
+    write /sys/class/android_usb/android0/bDeviceClass 2
+    write /sys/class/android_usb/android0/bDeviceSubClass 0
+    write /sys/class/android_usb/android0/bDeviceProtocol 0
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/class/android_usb/android0/bDeviceClass 224
     write /sys/class/android_usb/android0/enable 1
@@ -42,16 +72,31 @@ on property:sys.usb.config=rndis,adb
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 04e8
     write /sys/class/android_usb/android0/idProduct 6864
+<<<<<<< HEAD
+=======
+    write /sys/class/android_usb/android0/bDeviceClass 2
+    write /sys/class/android_usb/android0/bDeviceSubClass 0
+    write /sys/class/android_usb/android0/bDeviceProtocol 0
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/class/android_usb/android0/bDeviceClass 224
     write /sys/class/android_usb/android0/enable 1
     start adbd
     setprop sys.usb.state ${sys.usb.config}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126
 on property:sys.usb.config=ptp
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 04e8
     write /sys/class/android_usb/android0/idProduct 6865
+<<<<<<< HEAD
+=======
+    write /sys/class/android_usb/android0/bDeviceClass 239
+    write /sys/class/android_usb/android0/bDeviceSubClass 2
+    write /sys/class/android_usb/android0/bDeviceProtocol 1
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/class/android_usb/android0/enable 1
     setprop sys.usb.state ${sys.usb.config}
@@ -60,6 +105,12 @@ on property:sys.usb.config=ptp,adb
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 04e8
     write /sys/class/android_usb/android0/idProduct 6866
+<<<<<<< HEAD
+=======
+    write /sys/class/android_usb/android0/bDeviceClass 239
+    write /sys/class/android_usb/android0/bDeviceSubClass 2
+    write /sys/class/android_usb/android0/bDeviceProtocol 1
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/class/android_usb/android0/enable 1
     start adbd
@@ -90,7 +141,10 @@ on property:sys.usb.config=mass_storage
     setprop sys.usb.state ${sys.usb.config}
 
 on property:sys.usb.config=mass_storage,adb
+<<<<<<< HEAD
 
+=======
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 04e8
     write /sys/class/android_usb/android0/idProduct 685e
@@ -167,6 +221,10 @@ on property:sys.usb.config=mtp,conn_gadget
     write /sys/class/android_usb/android0/enable 1
     setprop sys.usb.state ${sys.usb.config}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126
 on property:sys.usb.config=mtp,conn_gadget,adb
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 04e8
@@ -175,3 +233,7 @@ on property:sys.usb.config=mtp,conn_gadget,adb
     write /sys/class/android_usb/android0/enable 1
     start adbd
     setprop sys.usb.state ${sys.usb.config}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126

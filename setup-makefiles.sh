@@ -1,7 +1,11 @@
 #!/bin/bash
 
 VENDOR=samsung
+<<<<<<< HEAD
 DEVICE=ha3g
+=======
+DEVICE=hllte
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #
 # Copyright (C) 2013 The CyanogenMod Project
 #
@@ -18,10 +19,19 @@ LOCAL_PATH := device/samsung/hllte
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
+=======
+LOCAL_PATH := device/samsung/hllte
+
+USE_CAMERA_STUB := true
+
+# inherit from the proprietary version
+-include vendor/samsung/hllte/BoardConfigVendor.mk
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126
 
 # Platform
 BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := exynos5
+<<<<<<< HEAD
 #TARGET_SLSI_VARIANT := insignal
 #TARGET_SOC := exynos5420
 
@@ -125,6 +135,48 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 
 # PowerHAL
 TARGET_POWERHAL_VARIANT := hllte
+=======
+
+# Architecture
+TARGET_ARCH := arm
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_VARIANT := cortex-a7
+TARGET_CPU_SMP := true
+ARCH_ARM_HAVE_TLS_REGISTER := true
+
+# Bootloader
+TARGET_OTA_ASSERT_DEVICE := hlltexx
+TARGET_BOOTLOADER_BOARD_NAME := universal5260
+TARGET_BOOTLOADER_BOARD_NAME := hllte
+TARGET_NO_BOOTLOADER := true
+TARGET_NO_RADIOIMAGE := true
+BOARD_HAS_NO_SELECT_BUTTON := true
+
+#Kernel
+#BOARD_KERNEL_CMDLINE := 
+BOARD_KERNEL_BASE := 0x10000000
+BOARD_KERNEL_PAGESIZE := 2048
+TARGET_PREBUILT_KERNEL := device/samsung/hllte/kernel
+
+# fix this up by examining /proc/mtd on a running device
+BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 12582912
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2401239040
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 12670992384
+BOARD_FLASH_BLOCK_SIZE := 4096
+
+# Bluetooth
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_BCM := true
+BOARD_BLUEDROID_VENDOR_CONF := $(LOCAL_PATH)/bluetooth/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
+
+# adb has root
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126
 
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -132,7 +184,11 @@ TARGET_USERIMAGES_USE_EXT4 := true
 #TARGET_USERIMAGES_USE_F2FS := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+<<<<<<< HEAD
 TARGET_RECOVERY_INITRC := $(LOCAL_PATH)/rootdir/etc/init.recovery.universal5260.rc
+=======
+#TARGET_RECOVERY_INITRC := $(LOCAL_PATH)/rootdir/etc/init.recovery.universal5260.rc
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -140,6 +196,7 @@ BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.universal5260
 
+<<<<<<< HEAD
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     $(LOCAL_PATH)/selinux
@@ -204,3 +261,10 @@ BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
 
 # inherit from the proprietary version
 -include vendor/samsung/ha3g/BoardConfigVendor.mk
+=======
+# RIL
+BOARD_MOBILEDATA_INTERFACE_NAME := "rmnet0"
+BOARD_PROVIDES_LIBRIL := true
+BOARD_MODEM_TYPE := xmm7160
+
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126

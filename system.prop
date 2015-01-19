@@ -1,6 +1,7 @@
 #
 # system.prop for hllte
 #
+<<<<<<< HEAD
 
 # Media
 ro.sapa.jack.master=alsa
@@ -33,3 +34,5 @@ rild.libpath=/system/lib/libsec-ril.so
 rild.libargs=-d /dev/ttyS0
 ro.ril.hsxpa=1
 ro.ril.gprsclass=10
+=======
+>>>>>>> 83045a4dc80246260fdb640c38e4d5af227fe126
